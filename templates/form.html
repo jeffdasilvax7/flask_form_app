@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple Flask Form</title>
+    <title>Students Form</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -30,19 +30,23 @@
     </style>
 </head>
 <body>
-    <h2>Feedback Form</h2>
+    <h2>Student Form</h2>
 
     {% if not submitted %}
     <form method="POST">
-        <label>Name:</label>
+        <label>First Name:</label>
         <input type="text" name="name" required>
+
+        <label>Last Name:</label>
+        <input type="text" name="last" required>
 
         <label>Email:</label>
         <input type="email" name="email" required>
 
-        <label>Message:</label>
-        <textarea name="message" rows="5" required></textarea>
+        <label>Birthdate:</label>
+        <input type="date" name="Birthdate" required>
 
+       
         <input type="submit" value="Submit">
     </form>
     {% else %}

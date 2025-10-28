@@ -6,11 +6,13 @@ app = Flask(__name__)
 def form():
     if request.method == "POST":
         name = request.form.get("name")
+        last = request.form.get("last")
         email = request.form.get("email")
-        message = request.form.get("message")
+        birthdate = request.form.get("birthdate")
+        
 
         # Here you could save data or process it
-        return render_template("form.html", submitted=True, name=name, message=message)
+        return render_template("form.html", submitted=True, name=name)
 
     return render_template("form.html", submitted=False)
 
